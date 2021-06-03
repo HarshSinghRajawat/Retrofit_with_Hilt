@@ -26,8 +26,6 @@ import retrofit2.Retrofit;
 @AndroidEntryPoint
 public class MainActivity extends AppCompatActivity {
     @Inject
-    Car car;
-    @Inject
     Retrofit retrofit;
     private RecyclerView recyclerView;
     private static final String TAG = "MainActivity";
@@ -36,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        car.Drive();
+        //car.Drive();
 
         ProgressBar bar=findViewById(R.id.progressBar);
 
