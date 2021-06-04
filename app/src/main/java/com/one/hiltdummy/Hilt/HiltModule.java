@@ -5,6 +5,7 @@ import com.one.hiltdummy.carTestExample.Wheels;
 import com.squareup.moshi.Moshi;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 import javax.inject.Singleton;
 
 import dagger.Provides;

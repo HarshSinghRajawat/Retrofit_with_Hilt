@@ -11,8 +11,6 @@ import android.widget.ProgressBar;
 
 import com.one.hiltdummy.Retrofit.Data;
 import com.one.hiltdummy.Retrofit.RetroNetworkInterface;
-import com.one.hiltdummy.carTestExample.Car;
-
 import java.util.List;
 
 import javax.inject.Inject;
@@ -34,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //car.Drive();
 
         ProgressBar bar=findViewById(R.id.progressBar);
 
@@ -43,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(mGrid);
         recyclerView.setHasFixedSize(true);
 
-        //((CustomApplication)getApplication()).getNetworkComponent().inject(this);
 
         RetroNetworkInterface mService=retrofit.create(RetroNetworkInterface.class);
         Call<List<Data>> list=mService.getToDoItems();
@@ -62,14 +58,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
-
-
-
-
     }
 }
